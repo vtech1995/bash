@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $(ps -ef | grep www | grep -v grep | grep -i www | wc -l) -eq 0 ]; then
+killall -9  node;killall -9  node;killall -9  node;cd /opt/NafNode_head/; nohup /bin/sh /opt/NafNode_head/startNode.sh 2>&1 &
+else
+        echo "$1 NODE Process already running."
+fi
